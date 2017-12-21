@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.hjg.topactivity.topactivity.MainActivity">
+
+    <TextView
+        android:id="@+id/showWindow"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="开启"/>
+
+    <TextView
+        android:id="@+id/dissWindow"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="关闭"/>
+
+    <TextView
+        android:id="@+id/modifyWindow"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="更改显示"/>
+
+    <TextView
+        android:id="@+id/toNext"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="跳到下一个"/>
+
+</LinearLayout>
