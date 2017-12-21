@@ -54,7 +54,6 @@ public class WatchingService extends Service {
         @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
         public void run() {
-            Log.d("RefreshTask", "执行了吗？");
             List<RunningTaskInfo> rtis = mActivityManager.getRunningTasks(1);
             final String act = rtis.get(0).topActivity.getPackageName() + "\n"
                     + rtis.get(0).topActivity.getClassName();
