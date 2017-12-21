@@ -19,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View view) {
+                //展示
                 TaskWindowManage.INSTANCE.ShowInApplication(MainActivity.this);
             }
         });
         findViewById(R.id.dissWindow).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //消失
                 TaskWindowManage.INSTANCE.dismiss(MainActivity.this);
             }
         });
