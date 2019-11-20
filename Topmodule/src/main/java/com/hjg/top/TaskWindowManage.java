@@ -25,12 +25,13 @@ public enum TaskWindowManage implements BaseManage {
     public void ShowInApplication(Context context) {
         if (Settings.canDrawOverlays(context)) {//有权限
             if (PermissionUtil.isServiceRunning(context, WatchingService.class.getName())) {
-                Toast.makeText(context, "服务正在运行...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "请勿重复运行服务", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(context, "开启服务", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "开启运行", Toast.LENGTH_SHORT).show();
                 context.startService(new Intent(context, WatchingService.class));
             }
         } else {//无权限
+            Toast.makeText(context, "需要开启权限", Toast.LENGTH_SHORT).show();
             PermissionUtil.startSetting(context);//跳转到设置界面
         }
     }

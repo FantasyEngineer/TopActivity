@@ -33,8 +33,8 @@ public class TasksWindow {
             sWindowParams = new WindowManager.LayoutParams(
                     WindowManager.LayoutParams.MATCH_PARENT,
                     WindowManager.LayoutParams.WRAP_CONTENT,
-                    Build.VERSION.SDK_INT <= Build.VERSION_CODES.N ? WindowManager.LayoutParams.TYPE_SYSTEM_ALERT : WindowManager.LayoutParams.TYPE_PHONE, 0x18,
-                    PixelFormat.TRANSLUCENT);
+                    Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY : WindowManager.LayoutParams.TYPE_SYSTEM_ALERT, 0x18,
+                    PixelFormat.RGBA_8888);
             //部分机器可以使用TYPE_TOAST
             sWindowParams.gravity = Gravity.START | Gravity.TOP;
         }
