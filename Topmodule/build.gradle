@@ -17,4 +17,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'pub.devrel:easypermissions:0.4.2'
+
 }

@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hjg.top.TaskWindowManage;
+import com.hjg.top.TopActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //展示
-                TaskWindowManage.INSTANCE.ShowInApplication(MainActivity.this);
+                TopActivity.INSTANCE.show(MainActivity.this);
             }
         });
         findViewById(R.id.dissWindow).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //消失
-                TaskWindowManage.INSTANCE.dismiss(MainActivity.this);
+                TopActivity.INSTANCE.dismiss(MainActivity.this);
             }
         });
         findViewById(R.id.modifyWindow).setOnClickListener(new View.OnClickListener() {

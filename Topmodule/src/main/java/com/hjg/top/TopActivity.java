@@ -14,15 +14,20 @@ import android.widget.Toast;
  * window管理类
  */
 
-public enum TaskWindowManage implements BaseManage {
+public enum TopActivity {
     INSTANCE;
+
+    @TargetApi(Build.VERSION_CODES.M)
+    public void show(Context context) {
+        TopActivity.INSTANCE.ShowInApplication(context);
+    }
+
 
     /**
      * 应用内---展示栈顶的activity
      */
     @RequiresApi(api = Build.VERSION_CODES.M)
-    @Override
-    public void ShowInApplication(Context context) {
+    private void ShowInApplication(Context context) {
         if (Settings.canDrawOverlays(context)) {//有权限
             if (PermissionUtil.isServiceRunning(context, WatchingService.class.getName())) {
                 Toast.makeText(context, "请勿重复运行服务", Toast.LENGTH_SHORT).show();
@@ -51,7 +56,6 @@ public enum TaskWindowManage implements BaseManage {
      * @param content
      */
     @RequiresApi(api = Build.VERSION_CODES.M)
-    @Override
     public void show(Context context, String content) {
         if (Settings.canDrawOverlays(context)) {//有权限
             TasksWindow.show(context, content);
@@ -63,15 +67,13 @@ public enum TaskWindowManage implements BaseManage {
     /**
      * 全局的消失
      */
-    @Override
-    public void dismiss() {
+    private void dismiss() {
         TasksWindow.dismiss();
     }
 
     /**
      * 全局的消失
      */
-    @Override
     public void dismiss(Context context) {
         if (PermissionUtil.isServiceRunning(context, WatchingService.class.getName())) {
             context.stopService(new Intent(context, WatchingService.class));

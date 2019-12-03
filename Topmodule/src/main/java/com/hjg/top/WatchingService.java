@@ -63,7 +63,7 @@ public class WatchingService extends Service {
                 mHandler.post(new Runnable() {
                     @Override
                     public void run() {
-                        TaskWindowManage.INSTANCE.show(WatchingService.this, act);
+                        TopActivity.INSTANCE.show(WatchingService.this, act);
                     }
                 });
             }
