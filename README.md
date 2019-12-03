@@ -14,8 +14,8 @@ Step 1.Add it in your root build.gradle at the end of repositories:<br>
 ```
   Step 2. Add the dependency<br>
  ```Java
- 	dependencies {<br>
-	        compile 'com.github.FantasyEngineer:TopActivity:V1.0'
+ 	dependencies {
+	        compile 'com.github.FantasyEngineer:TopActivity:V3.0'
 	}
 ```
 ### 代码使用<br>
