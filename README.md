@@ -21,9 +21,9 @@ Step 1.Add it in your root build.gradle at the end of repositories:<br>
 ### 代码使用<br>
 ```Java
      //展示
-     TaskWindowManage.INSTANCE.ShowInApplication(MainActivity.this);
+       TopActivity.INSTANCE.show(MainActivity.this);
      //消失
-     TaskWindowManage.INSTANCE.dismiss(MainActivity.this);
+     TopActivity.INSTANCE.dismiss(MainActivity.this);
 ```
 
 
